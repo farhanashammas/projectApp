@@ -1,12 +1,12 @@
 export class Signup {
     constructor(
-        fname:String,
-        lname:String,
-        email:String,
-        passwsord:String,
-        confirmPassword:String,
-        dp:String,
-        phone:Number
+        public fname:String,
+        public lname:String,
+        public email:String,
+        public passwsord:String,
+        public confirmPassword:String,
+        public dp:String,
+        public phone:Number
     ){}
 }
         
