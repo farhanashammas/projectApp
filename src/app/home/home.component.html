@@ -26,13 +26,11 @@
     <div *ngIf = "product && product.length">
       <div class="row">
         <div *ngFor = "let i of product">
-          <div class=""> 
+          <!-- <div class=""> 
              <a (click)='productDetail(i._id)'><img src="{{i.image}}" alt="" style="width: 300px; height: 300px;"></a>
             <h3>{{i.title}}</h3>
             <span>Price:{{i.price | currency:"INR"}}</span>
-            <!-- <button (click)='productDetail(i._id)' class="btn btn-primary">Details</button> -->
-            <!-- <div *ngIf='admin'><button class="btn btn-danger" (click)='delete(i._id)'>Delete</button></div> -->
-         </div>
+         </div> -->
         </div>
       </div>
     </div>
