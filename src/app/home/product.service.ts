@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, Inject } from '@angular/core';
 import { WebStorageService, LOCAL_STORAGE } from 'angular-webstorage-service';
-
+const __dirname="C:\Users\WORK\Desktop\ProjectFinal\projectApp"
 @Injectable({
   providedIn: 'root'
 })
@@ -52,7 +52,7 @@ export class ProductService {
     return this.http.post("http://localhost:8080/products/product",{id:id}) 
   }
   random(){
-    return this.http.get("http://localhost:8080/products/random") 
+    return this.http.get("/products/random") 
   }
 } 
 
