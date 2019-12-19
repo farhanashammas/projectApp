@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import {IProduct } from '../product.model'
 import { ProductService } from '../product.service';
 import { ActivatedRoute } from '@angular/router';
+import { WebStorageService, LOCAL_STORAGE } from 'angular-webstorage-service';
 
 @Component({
   selector: 'app-ad-details',
@@ -15,7 +16,7 @@ items=['Home Appliances','Electronics','Furnitures','Free Stuff','Two wheeler fo
 product:IProduct;
 id;
 
-constructor(private productService:ProductService,private route:ActivatedRoute) { }
+constructor(private productService:ProductService,private route:ActivatedRoute,@Inject(LOCAL_STORAGE) private storage:WebStorageService) { }
 
   ngOnInit() {
     this.id=this.productService.getId()
@@ -24,9 +25,9 @@ constructor(private productService:ProductService,private route:ActivatedRoute) 
       .subscribe((data) => {
          this.product = JSON.parse(JSON.stringify(data)).product ;
         console.log( this.product);
-      })
+      });
+
     } 
-    
 }
 
 

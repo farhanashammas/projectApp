@@ -15,6 +15,8 @@ import { ViewAdsComponent } from './home/view-ads/view-ads.component';
 import { AdDetailsComponent } from './home/ad-details/ad-details.component';
 import { AllAdsComponent } from './home/all-ads/all-ads.component';
 import { UsersComponent } from './home/users/users.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { UsersComponent } from './home/users/users.component';
     ReactiveFormsModule,
     StorageServiceModule, 
     HttpClientModule ,
-    FormsModule  
+    FormsModule,
+    BrowserAnimationsModule,
+    MatSliderModule  
   ],
   providers: [],
   bootstrap: [AppComponent]
