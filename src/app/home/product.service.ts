@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, Inject } from '@angular/core';
 import { WebStorageService, LOCAL_STORAGE } from 'angular-webstorage-service';
-const __dirname="C:\Users\WORK\Desktop\ProjectFinal\projectApp"
+const __dirname="https://landcombackend.herokuapp.com/"
 @Injectable({
   providedIn: 'root'
 })
@@ -16,43 +16,43 @@ export class ProductService {
     return this.storage.get('id');
   }
   login(user){
-    return this.http.post("http://localhost:8080/login",user)
+    return this.http.post(__dirname+"/login",user)
   }
   signup(user){
-    return this.http.post("http://localhost:8080/signup",user)
+    return this.http.post(__dirname+"/signup",user)
   }
   users(){
-    return this.http.get("http://localhost:8080/signup/users")
+    return this.http.get(__dirname+"/signup/users")
   }
   deleteUser(email){
-    return this.http.post("http://localhost:8080/signup/delete",{email:email})
+    return this.http.post(__dirname+"/signup/delete",{email:email})
   }
   products(category){ 
-    return this.http.post("http://localhost:8080/products",{category:category})
+    return this.http.post(__dirname+"/products",{category:category})
   }
   newProduct(product){
-    return this.http.post("http://localhost:8080/products/insert",product)  
+    return this.http.post(__dirname+"/products/insert",product)  
   }
   updateProduct(product){
-    return this.http.post("http://localhost:8080/products/update",product) 
+    return this.http.post(__dirname+"/products/update",product) 
   }
   delete(id){
-    return this.http.post("http://localhost:8080/products/delete",{id:id}) 
+    return this.http.post(__dirname+"/products/delete",{id:id}) 
   }
   setUser(email){
     this.storage.set('email',email);
   }
   getUser(user){
-    return this.http.post("http://localhost:8080/signup/profile",{email:user})
+    return this.http.post(__dirname+"/signup/profile",{email:user})
   }
   getAds(user){
-    return this.http.post("http://localhost:8080/products/ads",{email:user})
+    return this.http.post(__dirname+"/products/ads",{email:user})
   }
   product(id){
-    return this.http.post("http://localhost:8080/products/product",{id:id}) 
+    return this.http.post(__dirname+"/products/product",{id:id}) 
   }
   random(){
-    return this.http.get("/products/random") 
+    return this.http.get(__dirname+"/products/random") 
   }
 } 
 
