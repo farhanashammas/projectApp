@@ -12,7 +12,7 @@ export class AdDetailsComponent implements OnInit {
 
 items=['Home Appliances','Electronics','Furnitures','Free Stuff','Two wheeler for rent','Two wheeler for sale','Four wheeler for rent','Four wheeler for sale',
   'Residential unit for rent','Residential units for sale','Commercial units for rent','Commercial units for sale']
-product:IProduct[];
+product:IProduct;
 id;
 
 constructor(private productService:ProductService,private route:ActivatedRoute) { }
