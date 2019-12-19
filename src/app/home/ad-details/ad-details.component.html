@@ -9,14 +9,15 @@
     </div>
      <div class="container">
       <div *ngIf = "product">
-      <img src="{{product.image}}" alt="Image" style="width: 300px; height: 300px;">
-      <h3>{{product.title}}</h3>
-      <h5>Posted by:&nbsp; {{product.email}}</h5>
-      <h5>Price: &nbsp; {{product.price | currency:"INR"}}</h5>
-      <h5>Phone:&nbsp; {{product.phone}}</h5>
-      <h5>Usage: &nbsp; {{product.usage}}</h5>
-      <h5>Condition: &nbsp;{{product.condition}}</h5>
-      <h5>Location:&nbsp;{{product.location}}</h5>
+        <div *ngFor='let i of product' style="margin-left: 40%;">
+      <img src="{{i.image}}" alt="Image" style="width: 300px; height: 300px;">
+      <h3>{{i.title}}</h3>
+      <h5>Posted by:&nbsp; {{i.email}}</h5>
+      <h5>Price: &nbsp; {{i.price | currency:"INR"}}</h5>
+      <h5>Phone:&nbsp; {{i.phone}}</h5>
+      <h5>Usage: &nbsp; {{i.usage}}</h5>
+      <h5>Condition: &nbsp;{{i.condition}}</h5>
+      <h5>Location:&nbsp;{{i.location}}</h5>
       <a routerLink="">Back</a>
     </div>
   </div>

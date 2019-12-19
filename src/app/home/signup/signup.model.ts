@@ -3,7 +3,7 @@ export class Signup {
         public fname:String,
         public lname:String,
         public email:String,
-        public passwsord:String,
+        public password:String,
         public confirmPassword:String,
         public dp:String,
         public phone:Number
