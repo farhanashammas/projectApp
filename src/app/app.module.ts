@@ -17,6 +17,7 @@ import { AllAdsComponent } from './home/all-ads/all-ads.component';
 import { UsersComponent } from './home/users/users.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
+import { AboutComponent } from './home/about/about.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { MatSliderModule } from '@angular/material/slider';
     ViewAdsComponent,
     AdDetailsComponent,
     AllAdsComponent,
-    UsersComponent  
+    UsersComponent,
+    AboutComponent  
   ],
   imports: [
     BrowserModule,

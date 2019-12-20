@@ -9,6 +9,7 @@ import { ViewAdsComponent } from './home/view-ads/view-ads.component';
 import { AdDetailsComponent } from './home/ad-details/ad-details.component';
 import { AllAdsComponent } from './home/all-ads/all-ads.component';
 import { UsersComponent } from './home/users/users.component';
+import { AboutComponent } from './home/about/about.component';
 
 
 
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path:'ads',component:ViewAdsComponent} ,
   {path:'addetails',component:AdDetailsComponent},
   {path:'allads',component:AllAdsComponent},
-  {path:'users',component:UsersComponent}
+  {path:'users',component:UsersComponent},
+  {path:'about',component:AboutComponent}
  ];
 
 @NgModule({
