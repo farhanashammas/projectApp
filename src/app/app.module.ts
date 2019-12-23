@@ -18,6 +18,8 @@ import { UsersComponent } from './home/users/users.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { AboutComponent } from './home/about/about.component';
+import { FooterComponent } from './footer/footer.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { AboutComponent } from './home/about/about.component';
     AdDetailsComponent,
     AllAdsComponent,
     UsersComponent,
-    AboutComponent  
+    AboutComponent,
+    FooterComponent,
+    NotFoundComponent  
   ],
   imports: [
     BrowserModule,

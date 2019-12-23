@@ -10,6 +10,7 @@ import { AdDetailsComponent } from './home/ad-details/ad-details.component';
 import { AllAdsComponent } from './home/all-ads/all-ads.component';
 import { UsersComponent } from './home/users/users.component';
 import { AboutComponent } from './home/about/about.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 
@@ -24,7 +25,8 @@ const routes: Routes = [
   {path:'addetails',component:AdDetailsComponent},
   {path:'allads',component:AllAdsComponent},
   {path:'users',component:UsersComponent},
-  {path:'about',component:AboutComponent}
+  {path:'about',component:AboutComponent},
+  {path:'**',component:NotFoundComponent}
  ];
 
 @NgModule({
